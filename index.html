@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World - Multi Language</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .box {
+      background: #fff;
+      padding: 30px;
+      width: 350px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      margin: 6px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Hello World 🌍</h1>
+    <p>Select Language:</p>
+
+    <button onclick="setText('English')">English</button>
+    <button onclick="setText('Hindi')">Hindi</button>
+    <button onclick="setText('Marathi')">Marathi</button>
+    <button onclick="setText('French')">French</button>
+    <button onclick="setText('Spanish')">Spanish</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function setText(lang) {
+      let text = "";
+
+      switch(lang) {
+        case "English":
+          text = "Hello World";
+          break;
+        case "Hindi":
+          text = "नमस्ते दुनिया";
+          break;
+        case "Marathi":
+          text = "नमस्कार जग";
+          break;
+        case "French":
+          text = "Bonjour le monde";
+          break;
+        case "Spanish":
+          text = "Hola Mundo";
+          break;
+      }
+
+      document.getElementById("output").innerText = text;
+    }
+  </script>
+
+</body>
+</html>
